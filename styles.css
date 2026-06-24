@@ -2,18 +2,18 @@
    DESIGN SYSTEM & VARIABLES
    ========================================== */
 :root {
-    /* Theme: Dark Mode (Default) */
-    --bg-primary: hsl(222, 47%, 11%);
-    --bg-secondary: hsl(223, 47%, 15%);
-    --bg-card: hsla(223, 47%, 16%, 0.6);
-    --border-color: hsla(220, 20%, 90%, 0.08);
-    --text-primary: hsl(210, 40%, 98%);
-    --text-secondary: hsl(215, 20%, 65%);
+    /* Theme: Dark Mode (Default) - Warm Slate/Chocolate Base */
+    --bg-primary: hsl(24, 18%, 10%);
+    --bg-secondary: hsl(24, 18%, 14%);
+    --bg-card: hsla(24, 18%, 16%, 0.6);
+    --border-color: hsla(24, 20%, 90%, 0.06);
+    --text-primary: hsl(30, 30%, 97%);
+    --text-secondary: hsl(28, 15%, 70%);
     
-    /* Global Brand Tokens */
-    --accent-color: hsl(250, 85%, 65%);
-    --accent-gradient: linear-gradient(135deg, hsl(210, 100%, 50%), hsl(270, 100%, 60%));
-    --accent-glow: hsla(250, 85%, 65%, 0.15);
+    /* Global Brand Tokens - Sunset Warmth */
+    --accent-color: hsl(28, 90%, 60%);
+    --accent-gradient: linear-gradient(135deg, hsl(14, 85%, 58%), hsl(38, 90%, 60%));
+    --accent-glow: hsla(28, 90%, 60%, 0.15);
     
     --success: hsl(142, 70%, 45%);
     --error: hsl(350, 80%, 55%);
@@ -24,9 +24,9 @@
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.22), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -38,18 +38,18 @@
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Theme Overrides */
+/* Light Theme Overrides - Cozy Cream & Ivory */
 body.light-theme {
-    --bg-primary: hsl(220, 30%, 97%);
-    --bg-secondary: hsl(220, 20%, 93%);
-    --bg-card: hsla(0, 0%, 100%, 0.7);
-    --border-color: hsla(220, 20%, 10%, 0.08);
-    --text-primary: hsl(222, 47%, 12%);
-    --text-secondary: hsl(220, 15%, 45%);
+    --bg-primary: hsl(36, 40%, 96%);
+    --bg-secondary: hsl(36, 25%, 90%);
+    --bg-card: hsla(36, 50%, 100%, 0.75);
+    --border-color: hsla(24, 20%, 10%, 0.06);
+    --text-primary: hsl(24, 30%, 12%);
+    --text-secondary: hsl(24, 15%, 42%);
     
-    --accent-color: hsl(250, 75%, 50%);
-    --accent-gradient: linear-gradient(135deg, hsl(230, 85%, 55%), hsl(280, 85%, 55%));
-    --accent-glow: hsla(250, 75%, 50%, 0.08);
+    --accent-color: hsl(28, 85%, 48%);
+    --accent-gradient: linear-gradient(135deg, hsl(14, 80%, 52%), hsl(38, 85%, 52%));
+    --accent-glow: hsla(28, 85%, 48%, 0.08);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
@@ -143,13 +143,13 @@ button, input, textarea {
     border-radius: 50%;
     filter: blur(120px);
     z-index: -1;
-    opacity: 0.15;
+    opacity: 0.18;
     pointer-events: none;
     transition: all var(--transition-slow);
 }
 
 body.light-theme .blob {
-    opacity: 0.08;
+    opacity: 0.12;
     filter: blur(140px);
 }
 
@@ -159,6 +159,7 @@ body.light-theme .blob {
     width: 500px;
     height: 500px;
     background: var(--accent-color);
+    animation: warm-pulse-1 25s ease-in-out infinite;
 }
 
 .blob-2 {
@@ -166,16 +167,37 @@ body.light-theme .blob {
     left: -10%;
     width: 600px;
     height: 600px;
-    background: hsl(190, 80%, 50%);
+    background: hsl(14, 75%, 52%);
+    animation: warm-pulse-2 30s ease-in-out infinite;
 }
 
 .blob-3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    background: hsl(280, 80%, 50%);
+    width: 450px;
+    height: 450px;
+    background: hsl(40, 85%, 55%);
+    animation: warm-pulse-1 20s ease-in-out infinite alternate;
+}
+
+/* Cozy Ambient Floating Blob Keyframes */
+@keyframes warm-pulse-1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-10%, 12%) scale(1.15);
+    }
+}
+
+@keyframes warm-pulse-2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(12%, -10%) scale(0.9);
+    }
 }
 
 /* ==========================================
@@ -243,7 +265,7 @@ body.light-theme .blob {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px hsla(250, 85%, 65%, 0.35);
+    box-shadow: 0 6px 24px hsla(28, 90%, 60%, 0.35);
 }
 
 .btn-secondary {
@@ -839,7 +861,7 @@ body.light-theme .sun-icon {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(11, 15, 26, 0.7);
+    background: rgba(29, 24, 20, 0.75);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     display: flex;
