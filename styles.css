@@ -604,122 +604,90 @@ body.light-theme .sun-icon {
     width: 100%;
 }
 
-/* Bento Grid Landing Layout */
-.home-bento-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-    width: 100%;
-    margin-top: 1rem;
+/* Terminal Panel inside IDE */
+.ide-terminal {
+    background-color: hsl(140, 26%, 4%);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    font-size: 0.82rem;
+    font-family: Consolas, 'Fira Code', 'Courier New', Courier, monospace;
 }
 
-.home-bento-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 2.5rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-fast), border-color var(--transition-fast);
+.terminal-header {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: hsl(140, 26%, 3%);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.terminal-tab {
+    cursor: pointer;
     position: relative;
+    padding-bottom: 0.2rem;
+}
+
+.terminal-tab.active {
+    color: var(--accent-color);
+}
+
+.terminal-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.terminal-body {
+    padding: 0.75rem 1rem;
+    flex: 1;
     overflow: hidden;
+    position: relative;
 }
 
-.home-bento-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-color);
-}
-
-.welcome-panel {
-    grid-column: span 2;
-    grid-row: span 1;
+.terminal-waterfall {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 0.35rem;
+    animation: terminal-scroll 30s linear infinite;
 }
 
-.code-panel {
-    grid-column: span 2;
-    grid-row: span 2;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+.terminal-waterfall:hover {
+    animation-play-state: paused;
 }
 
-.tech-panel {
-    grid-column: span 2;
-    grid-row: span 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@keyframes terminal-scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
 }
 
-.tech-badges-row {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-.tech-badge-inline {
+.terminal-line {
+    color: hsl(140, 10%, 75%);
+    white-space: nowrap;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 0.45rem 0.85rem;
-    background-color: hsla(140, 26%, 15%, 0.3);
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: all var(--transition-fast);
-    cursor: pointer;
 }
 
-.tech-badge-inline:hover {
-    border-color: var(--accent-color);
-    background-color: var(--accent-glow);
-    transform: translateY(-2px);
+.terminal-success {
+    color: #34d399;
 }
 
-.bento-mini-card {
-    grid-column: span 1;
-    grid-row: span 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    text-align: center;
+.terminal-info {
+    color: #61dafb;
 }
 
-.bento-mini-card i {
-    font-size: 1.8rem;
+.terminal-accent {
     color: var(--accent-color);
-    margin-bottom: 0.75rem;
-}
-
-.mini-card-val {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-primary);
-}
-
-.mini-card-lbl {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    margin-top: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.code-panel .developer-ide {
-    max-width: 100%;
-    height: 100%;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
 }
 
 /* Developer IDE Mockup */
@@ -844,7 +812,7 @@ body.light-theme .sun-icon {
 .ide-main {
     display: grid;
     grid-template-columns: 150px 1fr;
-    height: 290px;
+    height: 460px;
 }
 
 .ide-sidebar {
@@ -1004,36 +972,12 @@ body.light-theme .sun-icon {
 }
 
 @media (max-width: 992px) {
-    .home-bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .welcome-panel, .code-panel, .tech-panel {
-        grid-column: span 2;
-    }
-    .bento-mini-card {
-        grid-column: span 1;
-    }
-    .welcome-panel {
-        text-align: center;
-    }
-    .hero-description {
-        margin: 0 auto 2.5rem;
-    }
-    .hero-ctas {
-        justify-content: center;
-    }
     .developer-ide {
         margin: 0 auto;
     }
 }
 
 @media (max-width: 576px) {
-    .home-bento-grid {
-        grid-template-columns: 1fr;
-    }
-    .welcome-panel, .code-panel, .tech-panel, .bento-mini-card {
-        grid-column: span 1;
-    }
     .ide-main {
         grid-template-columns: 1fr;
     }
