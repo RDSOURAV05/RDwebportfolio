@@ -4,18 +4,18 @@
    DESIGN SYSTEM & VARIABLES
    ========================================== */
 :root {
-    /* Theme: Dark Mode (Default) - Warm Slate/Chocolate Base */
-    --bg-primary: hsl(24, 18%, 10%);
-    --bg-secondary: hsl(24, 18%, 14%);
-    --bg-card: hsla(24, 18%, 16%, 0.6);
-    --border-color: hsla(24, 20%, 90%, 0.06);
-    --text-primary: hsl(30, 30%, 97%);
-    --text-secondary: hsl(28, 15%, 70%);
+    /* Theme: Dark Mode (Default) - Stadium Football Pitch Base */
+    --bg-primary: hsl(140, 26%, 10%);
+    --bg-secondary: hsl(140, 26%, 14%);
+    --bg-card: hsla(140, 26%, 16%, 0.6);
+    --border-color: hsla(140, 20%, 90%, 0.08);
+    --text-primary: hsl(140, 20%, 98%);
+    --text-secondary: hsl(140, 10%, 75%);
     
-    /* Global Brand Tokens - Sunset Warmth */
-    --accent-color: hsl(28, 90%, 60%);
-    --accent-gradient: linear-gradient(135deg, hsl(14, 85%, 58%), hsl(38, 90%, 60%));
-    --accent-glow: hsla(28, 90%, 60%, 0.15);
+    /* Global Brand Tokens - Pitch Green & Stadium Gold */
+    --accent-color: hsl(140, 80%, 55%);
+    --accent-gradient: linear-gradient(135deg, hsl(140, 80%, 50%), hsl(42, 90%, 60%));
+    --accent-glow: hsla(140, 80%, 55%, 0.15);
     
     --success: hsl(142, 70%, 45%);
     --error: hsl(350, 80%, 55%);
@@ -40,18 +40,18 @@
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Theme Overrides - Cozy Cream & Ivory */
+/* Light Theme Overrides - Soft Turf Cream & Pitch Green */
 body.light-theme {
-    --bg-primary: hsl(36, 40%, 96%);
-    --bg-secondary: hsl(36, 25%, 90%);
-    --bg-card: hsla(36, 50%, 100%, 0.75);
-    --border-color: hsla(24, 20%, 10%, 0.06);
-    --text-primary: hsl(24, 30%, 12%);
-    --text-secondary: hsl(24, 15%, 42%);
+    --bg-primary: hsl(140, 30%, 96%);
+    --bg-secondary: hsl(140, 20%, 90%);
+    --bg-card: hsla(140, 40%, 100%, 0.75);
+    --border-color: hsla(140, 40%, 20%, 0.08);
+    --text-primary: hsl(140, 40%, 12%);
+    --text-secondary: hsl(140, 20%, 42%);
     
-    --accent-color: hsl(28, 85%, 48%);
-    --accent-gradient: linear-gradient(135deg, hsl(14, 80%, 52%), hsl(38, 85%, 52%));
-    --accent-glow: hsla(28, 85%, 48%, 0.08);
+    --accent-color: hsl(140, 75%, 42%);
+    --accent-gradient: linear-gradient(135deg, hsl(140, 75%, 40%), hsl(38, 85%, 50%));
+    --accent-glow: hsla(140, 75%, 42%, 0.08);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
@@ -143,16 +143,21 @@ button, input, textarea {
     width: 100%;
     height: 100%;
     z-index: -3;
+    background-color: var(--bg-primary);
     background-image: 
-        linear-gradient(to right, var(--border-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
-    background-size: 80px 80px;
-    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
-    opacity: 0.4;
+        /* Alternating turf vertical stripes */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 50%, transparent 50%),
+        /* Center circle (120px radius) */
+        radial-gradient(circle at 50% 50%, transparent 119px, var(--border-color) 120px, transparent 121px),
+        /* Center spot */
+        radial-gradient(circle at 50% 50%, var(--border-color) 5px, transparent 6px),
+        /* Center line */
+        linear-gradient(to right, transparent calc(50% - 1px), var(--border-color) 50%, transparent calc(50% + 1px));
+    background-size: 160px 100%, 100% 100%, 100% 100%, 100% 100%;
+    opacity: 0.95;
 }
 
-/* Trending Mouse Following Glow */
+/* Trending Mouse Following Glow - Stadium Light */
 .mouse-glow {
     position: fixed;
     top: 0;
@@ -160,13 +165,13 @@ button, input, textarea {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(28, 90%, 60%, 0.08), transparent 80%);
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(140, 90%, 60%, 0.08), transparent 80%);
     pointer-events: none;
     transition: opacity var(--transition-slow);
 }
 
 body.light-theme .mouse-glow {
-    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(28, 85%, 48%, 0.05), transparent 80%);
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(140, 85%, 48%, 0.05), transparent 80%);
 }
 
 /* Trending Grain/Noise Overlay */
@@ -215,7 +220,7 @@ body.light-theme .blob {
     left: -10%;
     width: 600px;
     height: 600px;
-    background: hsl(14, 75%, 52%);
+    background: hsl(140, 75%, 52%);
     animation: warm-pulse-2 30s ease-in-out infinite;
 }
 
