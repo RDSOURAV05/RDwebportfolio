@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R D Sourav | Computer Science & AI Student</title>
+    <meta name="description" content="Portfolio of R D Sourav, a Computer Science & AI student specializing in Python, C, Robotics, and Database Management.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Decoration Grid & Gradients -->
+    <div class="bg-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation Header -->
+    <header id="header" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">&lt;</span>Sourav<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Switch -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge fade-in">Computer Science with AI Student</span>
+                    <h1 class="hero-title fade-in">
+                        Hi, I'm <span class="gradient-text">R D Sourav</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in">
+                        I build <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description fade-in">
+                        Studying Computer Science and Artificial Intelligence at Mar Baselios College of Engineering and Technology. Passionate about robotics, programming, databases, and leadership.
+                    </p>
+                    <div class="hero-ctas fade-in">
+                        <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="visual-card">
+                        <div class="card-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <pre class="code-editor"><code><span class="code-keyword">const</span> <span class="code-variable">student</span> = {
+  name: <span class="code-string">'R D Sourav'</span>,
+  college: <span class="code-string">'MBCET'</span>,
+  course: <span class="code-string">'CS with AI'</span>,
+  skills: [<span class="code-string">'Python'</span>, <span class="code-string">'C'</span>, <span class="code-string">'Robotics'</span>, <span class="code-string">'DBMS'</span>],
+  leadership: <span class="code-literal">true</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-function">runProject</span>() {
+  <span class="code-keyword">return</span> <span class="code-variable">student</span>.skills
+    .map(s => <span class="code-string">`🤖 Initiating ${s} system`</span>);
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll Down">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <span class="section-badge">About Me</span>
+                <h2 class="section-title">My Journey & Background</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I am a Computer Science and Artificial Intelligence student at Mar Baselios College of Engineering and Technology. I focus on merging computing principles with intelligent systems, working on projects ranging from relational databases to physical robotic architectures.
+                        </p>
+                        <p>
+                            Beyond technical skills, I highly value leadership and communication, often coordinating team projects and student initiatives to drive collective success.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Core Skills</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Academic Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Team Lead Roles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-timeline">
+                        <h3 class="timeline-title">Education & Focus</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-date">Active B.Tech Student</span>
+                                <h4 class="timeline-role">Computer Science with AI</h4>
+                                <p class="timeline-org">Mar Baselios College of Engineering and Technology</p>
+                                <p class="timeline-desc">Engaged in deep coursework including Machine Learning, Artificial Intelligence, Robotics, and Database Management.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Core Track</span>
+                                <h4 class="timeline-role">Robotics & Database Engineering</h4>
+                                <p class="timeline-org">Self-directed & Lab projects</p>
+                                <p class="timeline-desc">Designing embedded micro-controller systems and relational query databases.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <span class="section-badge">My Stack</span>
+                <h2 class="section-title">Technical & Professional Expertise</h2>
+                <p class="section-desc">Here are the technical and interpersonal capabilities I deploy to build software and coordinate teams.</p>
+                
+                <div class="skills-grid">
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info"><span>Python</span><span>88%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>C Programming</span><span>82%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 82%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-robot"></i>
+                            <h3>Core Engineering</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info"><span>Robotics Systems</span><span>85%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Database Management Systems (DBMS)</span><span>80%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Artificial Intelligence Foundations</span><span>75%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-users"></i>
+                            <h3>Leadership & Communication</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info"><span>Leadership & Team Orchestration</span><span>90%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Communication Skills</span><span>92%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-info"><span>Collaboration & Presentation</span><span>88%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <span class="section-badge">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="robotics">Robotics & C</button>
+                    <button class="filter-btn" data-filter="ai">AI & Python</button>
+                    <button class="filter-btn" data-filter="db">Database & DBMS</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="robotics">
+                        <div class="project-image-wrapper">
+                            <img src="assets/project1.png" alt="Autonomous Maze Solver Robot" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-meta">Robotics / C Programming</span>
+                            <h3 class="project-card-title">Autonomous Maze Navigator</h3>
+                            <p class="project-card-desc">
+                                A mini-robot system using ultrasonic sensors and pathfinding algorithms written in C to escape dynamic maze grids.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">Arduino</span>
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Sensors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image-wrapper">
+                            <img src="assets/project2.png" alt="AI Predictive Modeling" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-meta">AI / Python</span>
+                            <h3 class="project-card-title">Predictive Pattern Analyzer</h3>
+                            <p class="project-card-desc">
+                                A machine learning program built in Python that analyzes student performance metrics to predict educational outcomes.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-Learn</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="db">
+                        <div class="project-image-wrapper">
+                            <img src="assets/project3.png" alt="DBMS Administration Tool" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-meta">Database / Python</span>
+                            <h3 class="project-card-title">Relational Database Administrator</h3>
+                            <p class="project-card-desc">
+                                A relational database engine interface designed to optimize SQL indexing and streamline CRUD operations with an interactive visual dashboard.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Tkinter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">Let's Connect</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out for robotics collaborations, AI developments, or team projects. I am eager to connect and build together.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="method-label">Email Me</span>
+                                    <a href="mailto:sourav@email.com" class="method-link">sourav@email.com</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="method-label">College Location</span>
+                                    <span class="method-text">Trivandrum, Kerala, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                    <span class="error-msg">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                    <span class="error-msg">Please enter a valid email address</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                                <span class="error-msg">Please enter a subject</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                                <span class="error-msg">Please enter your message</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary form-submit">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            
+                            <!-- Success / Error Status Messages -->
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 R D Sourav. Built with ❤️ and Vanilla CSS.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
