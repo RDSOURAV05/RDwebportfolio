@@ -301,6 +301,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // MOUSE FOLLOW GLOW EFFECT
+    // ==========================================
+    const mouseGlow = document.querySelector('.mouse-glow');
+    if (mouseGlow) {
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        });
+    }
+
     function setInputError(input, isError) {
         const group = input.parentElement;
         if (isError) {

@@ -139,21 +139,55 @@ button, input, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: -3;
     background-image: 
         linear-gradient(to right, var(--border-color) 1px, transparent 1px),
         linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%);
-    opacity: 0.5;
+    opacity: 0.4;
+}
+
+/* Trending Mouse Following Glow */
+.mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(28, 90%, 60%, 0.08), transparent 80%);
+    pointer-events: none;
+    transition: opacity var(--transition-slow);
+}
+
+body.light-theme .mouse-glow {
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(28, 85%, 48%, 0.05), transparent 80%);
+}
+
+/* Trending Grain/Noise Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.022;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+body.light-theme .noise-overlay {
+    opacity: 0.015;
 }
 
 .blob {
     position: fixed;
     border-radius: 50%;
     filter: blur(120px);
-    z-index: -1;
+    z-index: -3;
     opacity: 0.18;
     pointer-events: none;
     transition: all var(--transition-slow);
