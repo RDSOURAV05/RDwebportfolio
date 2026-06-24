@@ -672,11 +672,23 @@ body.light-theme .sun-icon {
     padding: 6rem 0;
 }
 
-.about-top-layout {
+.about-grid-main {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 4rem;
-    align-items: stretch;
+    align-items: start;
+}
+
+.about-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about-story-card {
@@ -684,9 +696,6 @@ body.light-theme .sun-icon {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--shadow-md);
@@ -796,22 +805,6 @@ body.light-theme .sun-icon {
     color: hsl(210, 40%, 98%) !important;
 }
 
-/* Divider */
-.about-divider {
-    border: 0;
-    height: 1px;
-    background: var(--border-color);
-    margin: 5rem 0;
-}
-
-/* Bottom layout - Timeline */
-.about-bottom-layout {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 4rem;
-    align-items: start;
-}
-
 .timeline-intro-desc {
     font-size: 1.05rem;
     color: var(--text-secondary);
@@ -912,14 +905,9 @@ body.light-theme .sun-icon {
 }
 
 @media (max-width: 992px) {
-    .about-top-layout {
+    .about-grid-main {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-    
-    .about-bottom-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 3rem;
     }
 }
 
