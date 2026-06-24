@@ -78,13 +78,72 @@
                     </div>
                 </div>
                 <div class="hero-visual fade-in">
-                    <div class="visual-card">
-                        <div class="card-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+                    <div class="developer-ide">
+                        <!-- Window Title Bar -->
+                        <div class="ide-titlebar">
+                            <div class="ide-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="ide-title">vscode — Sourav.js</div>
+                            <div class="ide-actions">
+                                <i class="fa-solid fa-minus"></i>
+                                <i class="fa-solid fa-square"></i>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
                         </div>
-                        <pre class="code-editor" id="code-card-pre"><code><span class="code-keyword">const</span> <span class="code-variable">student</span> = {
+                        
+                        <div class="ide-main">
+                            <!-- Sidebar -->
+                            <div class="ide-sidebar">
+                                <div class="sidebar-header">EXPLORER</div>
+                                <div class="file-tree">
+                                    <div class="tree-item folder open">
+                                        <i class="fa-solid fa-chevron-down tree-arrow"></i>
+                                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                                        <span>portfolio</span>
+                                    </div>
+                                    <div class="tree-children">
+                                        <div class="tree-item file active">
+                                            <i class="fa-brands fa-js file-icon js"></i>
+                                            <span>Sourav.js</span>
+                                        </div>
+                                        <div class="tree-item file">
+                                            <i class="fa-brands fa-react file-icon react"></i>
+                                            <span>Projects.jsx</span>
+                                        </div>
+                                        <div class="tree-item file">
+                                            <i class="fa-solid fa-envelope file-icon contact"></i>
+                                            <span>Contact.json</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Editor Area -->
+                            <div class="ide-editor-area">
+                                <!-- Tabs Bar -->
+                                <div class="editor-tabs">
+                                    <div class="editor-tab active">
+                                        <i class="fa-brands fa-js tab-icon js"></i>
+                                        <span>Sourav.js</span>
+                                        <i class="fa-solid fa-xmark tab-close"></i>
+                                    </div>
+                                    <div class="editor-tab">
+                                        <i class="fa-brands fa-react tab-icon react"></i>
+                                        <span>Projects.jsx</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Code Editor Container -->
+                                <div class="editor-body">
+                                    <!-- Line Numbers -->
+                                    <div class="line-numbers">
+                                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                                    </div>
+                                    <!-- Code Area -->
+                                    <pre class="code-editor"><code><span class="code-keyword">const</span> <span class="code-variable">student</span> = {
   name: <span class="code-string">'R D Sourav'</span>,
   college: <span class="code-string">'MBCET'</span>,
   course: <span class="code-string">'CS with AI'</span>,
@@ -95,6 +154,22 @@
 <span class="code-keyword">function</span> <span class="code-function">runProject</span>() {
   <span class="code-keyword">return</span> <span class="code-string">'The early bird catches the prey'</span>;
 }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Status Bar -->
+                        <div class="ide-statusbar">
+                            <div class="status-left">
+                                <span class="status-git"><i class="fa-solid fa-code-branch"></i> master*</span>
+                                <span class="status-sync"><i class="fa-solid fa-arrows-rotate"></i></span>
+                            </div>
+                            <div class="status-right">
+                                <span>Spaces: 2</span>
+                                <span>UTF-8</span>
+                                <span>Javascript</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
