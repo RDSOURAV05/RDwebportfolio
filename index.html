@@ -73,12 +73,6 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <!-- Floating Tech Badges -->
-                    <div class="floating-badge badge-python" title="Python"><i class="fa-brands fa-python" style="color: #306998;"></i></div>
-                    <div class="floating-badge badge-react" title="React"><i class="fa-brands fa-react" style="color: #61dafb;"></i></div>
-                    <div class="floating-badge badge-ai" title="Artificial Intelligence"><i class="fa-solid fa-brain" style="color: #ff6b6b;"></i></div>
-                    <div class="floating-badge badge-robot" title="Robotics"><i class="fa-solid fa-robot" style="color: #f5de19;"></i></div>
-                    
                     <div class="visual-card">
                         <div class="card-dots">
                             <span class="dot red"></span>
@@ -89,61 +83,14 @@
   name: <span class="code-string">'R D Sourav'</span>,
   college: <span class="code-string">'MBCET'</span>,
   course: <span class="code-string">'CS with AI'</span>,
-  skills: [
-    <span class="code-string">'Software Engineer'</span>, <span class="code-string">'NLP'</span>, <span class="code-string">'DL'</span>, <span class="code-string">'ML'</span>,
-    <span class="code-string">'Networks'</span>, <span class="code-string">'Cryptography'</span>, <span class="code-string">'MATLAB'</span>
-  ],
+  skills: [<span class="code-string">'Python'</span>, <span class="code-string">'C'</span>, <span class="code-string">'Robotics'</span>, <span class="code-string">'DBMS'</span>],
   leadership: <span class="code-literal">true</span>
 };
-
+ 
 <span class="code-keyword">function</span> <span class="code-function">runProject</span>() {
-  <span class="code-keyword">return</span> <span class="code-string">'The early bird catches the prey'</span>;
+  <span class="code-keyword">return</span> <span class="code-variable">student</span>.skills
+    .map(s => <span class="code-string">`🤖 Initiating ${s} system`</span>);
 }</code></pre>
-                        
-                        <!-- Minimal Terminal Panel -->
-                        <div class="minimal-terminal">
-                            <div class="terminal-divider"></div>
-                            <div class="terminal-body">
-                                <div class="terminal-waterfall">
-                                    <div class="terminal-line"><span class="terminal-success">✔</span> Diagnostic check passed...</div>
-                                    <div class="terminal-line"><span class="terminal-info">i</span> Initiating development system...</div>
-                                    <div class="terminal-line">🤖 Initiating Software Engineer system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating NLP system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating DL (Deep Learning) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating ML (Machine Learning) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Computer Networks system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Cryptography system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Scientific Computing using MATLAB... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Database Management (SQL) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Version Control (Git/GitHub) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Web Technologies (HTML/CSS/JS) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Linux Systems & Administration... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Data Structures & Algorithms... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Cloud Computing (AWS/GCP) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Object-Oriented Design (OOD) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Agile/Scrum Methodologies... <span class="terminal-accent">OK</span></div>
-                                    
-                                    <!-- Duplicate list for seamless infinite loop scroll -->
-                                    <div class="terminal-line"><span class="terminal-success">✔</span> Diagnostic check passed...</div>
-                                    <div class="terminal-line"><span class="terminal-info">i</span> Initiating development system...</div>
-                                    <div class="terminal-line">🤖 Initiating Software Engineer system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating NLP system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating DL (Deep Learning) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating ML (Machine Learning) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Computer Networks system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Cryptography system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Scientific Computing using MATLAB... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Database Management (SQL) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Version Control (Git/GitHub) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Web Technologies (HTML/CSS/JS) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Linux Systems & Administration... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Data Structures & Algorithms... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Cloud Computing (AWS/GCP) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Object-Oriented Design (OOD) system... <span class="terminal-accent">OK</span></div>
-                                    <div class="terminal-line">🤖 Initiating Agile/Scrum Methodologies... <span class="terminal-accent">OK</span></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
