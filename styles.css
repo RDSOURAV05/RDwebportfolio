@@ -551,6 +551,18 @@ body.light-theme .sun-icon {
     animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
 }
 
+.rainbow-text {
+    background: linear-gradient(to right, #ff5f56, #ffbd2e, #27c93f, #61dafb, #b5179e, #ff5f56);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards, shine-colors 4s linear infinite;
+}
+
+@keyframes shine-colors {
+    to { background-position: 200% center; }
+}
+
 .typewriter-text {
     color: var(--accent-color);
 }
