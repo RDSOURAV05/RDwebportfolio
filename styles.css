@@ -1040,13 +1040,7 @@ body.light-theme .sun-icon {
 
 /* Contact Form */
 .contact-form-wrapper {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 3rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: var(--shadow-md);
+    padding: 1.5rem 0;
 }
 
 .contact-form {
@@ -1069,31 +1063,33 @@ body.light-theme .sun-icon {
 }
 
 .form-group label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .form-group input, .form-group textarea {
-    padding: 0.8rem 1rem;
-    border-radius: var(--radius-sm);
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    transition: all var(--transition-fast);
+    padding: 0.8rem 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    border-radius: 0;
+    transition: border-color var(--transition-fast);
 }
 
 .form-group input:focus, .form-group textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+    border-bottom-color: var(--accent-color);
 }
 
 /* Validation styling */
 .form-group.invalid input, .form-group.invalid textarea {
-    border-color: var(--error);
+    border-bottom-color: var(--error);
 }
 
 .form-group.invalid input:focus, .form-group.invalid textarea:focus {
-    box-shadow: 0 0 0 3px hsla(350, 80%, 55%, 0.15);
+    border-bottom-color: var(--error);
 }
 
 .error-msg {
