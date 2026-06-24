@@ -954,20 +954,29 @@ body.light-theme .sun-icon {
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
 }
 
 .contact-info h3 {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .contact-info p {
     color: var(--text-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .contact-methods {
@@ -975,6 +984,7 @@ body.light-theme .sun-icon {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 4rem;
+    align-items: center;
 }
 
 .method-item {
@@ -1017,6 +1027,7 @@ body.light-theme .sun-icon {
 .social-links {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .social-icon {
