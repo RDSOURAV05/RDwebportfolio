@@ -442,10 +442,19 @@ body.light-theme .sun-icon {
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .hero-badge {
@@ -474,7 +483,7 @@ body.light-theme .sun-icon {
     font-size: 2.2rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .typewriter-text {
@@ -489,16 +498,79 @@ body.light-theme .sun-icon {
     50% { opacity: 0; }
 }
 
-.hero-description {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-}
-
 .hero-ctas {
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+/* Stylish Proverbs Grid */
+.hero-proverbs {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    max-width: 960px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.proverb-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.2rem 1.8rem 1.8rem 1.8rem;
+    flex: 1;
+    position: relative;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proverb-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+.proverb-quote {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--accent-color);
+    line-height: 0.1;
+    position: absolute;
+    top: 1.8rem;
+    left: 1rem;
+    opacity: 0.12;
+    user-select: none;
+}
+
+.proverb-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.proverb-author {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: auto;
+}
+
+/* Profile Code Card Margin in About Section */
+.about-code-card {
+    margin-top: 3.5rem;
 }
 
 /* Visual Card Mockup */
@@ -1205,7 +1277,6 @@ body.light-theme .sun-icon {
    ========================================== */
 @media (max-width: 1024px) {
     .hero-container {
-        grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
     }
@@ -1216,12 +1287,14 @@ body.light-theme .sun-icon {
         align-items: center;
     }
     
-    .hero-description {
-        margin-inline: auto;
-    }
-    
     .hero-ctas {
         justify-content: center;
+    }
+    
+    .hero-proverbs {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 550px;
     }
     
     .about-grid {
