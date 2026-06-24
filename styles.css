@@ -39,8 +39,13 @@
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Tactical Football Pitch SVG (Dark Theme) */
-    --bg-grid-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1200' width='100%25' height='100%25'%3E%3Cg fill='%23ffffff' opacity='0.015'%3E%3Crect x='0' y='0' width='100' height='1200' /%3E%3Crect x='200' y='0' width='100' height='1200' /%3E%3Crect x='400' y='0' width='100' height='1200' /%3E%3Crect x='600' y='0' width='100' height='1200' /%3E%3C/g%3E%3Cg fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='2'%3E%3Crect x='40' y='40' width='720' height='1120' /%3E%3Cline x1='40' y1='600' x2='760' y2='600' /%3E%3Ccircle cx='400' cy='600' r='100' /%3E%3Ccircle cx='400' cy='600' r='4' fill='rgba(255,255,255,0.08)' /%3E%3Crect x='200' y='40' width='400' height='160' /%3E%3Crect x='310' y='40' width='180' height='60' /%3E%3Ccircle cx='400' cy='150' r='3' fill='rgba(255,255,255,0.08)' /%3E%3Cpath d='M 330 200 A 90 90 0 0 0 470 200' /%3E%3Crect x='200' y='1000' width='400' height='160' /%3E%3Crect x='310' y='1100' width='180' height='60' /%3E%3Ccircle cx='400' cy='1050' r='3' fill='rgba(255,255,255,0.08)' /%3E%3Cpath d='M 330 1000 A 90 90 0 0 1 470 1000' /%3E%3Cpath d='M 60 40 A 20 20 0 0 1 40 60' /%3E%3Cpath d='M 740 40 A 20 20 0 0 0 760 60' /%3E%3Cpath d='M 40 1140 A 20 20 0 0 0 60 1160' /%3E%3Cpath d='M 760 1140 A 20 20 0 0 1 740 1160' /%3E%3C/g%3E%3C/svg%3E");
+    /* 4-Column Background Colors (Dark Theme) */
+    --bg-col-1: hsl(355, 50%, 12%);
+    --bg-col-2: hsl(224, 40%, 14%);
+    --bg-col-3: hsl(24, 45%, 12%);
+    --bg-col-4: hsl(140, 26%, 10%);
+    --bg-divider: #000000;
+    --bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75));
 }
 
 /* Light Theme Overrides - Soft Turf Cream & Pitch Green */
@@ -60,8 +65,13 @@ body.light-theme {
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     
-    /* Tactical Football Pitch SVG (Light Theme) */
-    --bg-grid-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1200' width='100%25' height='100%25'%3E%3Cg fill='%23004d00' opacity='0.015'%3E%3Crect x='0' y='0' width='100' height='1200' /%3E%3Crect x='200' y='0' width='100' height='1200' /%3E%3Crect x='400' y='0' width='100' height='1200' /%3E%3Crect x='600' y='0' width='100' height='1200' /%3E%3C/g%3E%3Cg fill='none' stroke='rgba(0,77,0,0.08)' stroke-width='2'%3E%3Crect x='40' y='40' width='720' height='1120' /%3E%3Cline x1='40' y1='600' x2='760' y2='600' /%3E%3Ccircle cx='400' cy='600' r='100' /%3E%3Ccircle cx='400' cy='600' r='4' fill='rgba(0,77,0,0.08)' /%3E%3Crect x='200' y='40' width='400' height='160' /%3E%3Crect x='310' y='40' width='180' height='60' /%3E%3Ccircle cx='400' cy='150' r='3' fill='rgba(0,77,0,0.08)' /%3E%3Cpath d='M 330 200 A 90 90 0 0 0 470 200' /%3E%3Crect x='200' y='1000' width='400' height='160' /%3E%3Crect x='310' y='1100' width='180' height='60' /%3E%3Ccircle cx='400' cy='1050' r='3' fill='rgba(0,77,0,0.08)' /%3E%3Cpath d='M 330 1000 A 90 90 0 0 1 470 1000' /%3E%3Cpath d='M 60 40 A 20 20 0 0 1 40 60' /%3E%3Cpath d='M 740 40 A 20 20 0 0 0 760 60' /%3E%3Cpath d='M 40 1140 A 20 20 0 0 0 60 1160' /%3E%3Cpath d='M 760 1140 A 20 20 0 0 1 740 1160' /%3E%3C/g%3E%3C/svg%3E");
+    /* 4-Column Background Colors (Light Theme) */
+    --bg-col-1: hsl(355, 60%, 94%);
+    --bg-col-2: hsl(224, 50%, 94%);
+    --bg-col-3: hsl(24, 55%, 94%);
+    --bg-col-4: hsl(140, 30%, 94%);
+    --bg-divider: #ffffff;
+    --bg-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.65));
 }
 
 /* ==========================================
@@ -150,10 +160,18 @@ button, input, textarea {
     height: 100%;
     z-index: -3;
     background-color: var(--bg-primary);
-    background-image: var(--bg-grid-svg);
+    background-image: 
+        var(--bg-overlay),
+        linear-gradient(to right,
+            var(--bg-col-1) 0%, var(--bg-col-1) calc(25% - 4px),
+            var(--bg-divider) calc(25% - 4px), var(--bg-divider) calc(25% + 4px),
+            var(--bg-col-2) calc(25% + 4px), var(--bg-col-2) calc(50% - 4px),
+            var(--bg-divider) calc(50% - 4px), var(--bg-divider) calc(50% + 4px),
+            var(--bg-col-3) calc(50% + 4px), var(--bg-col-3) calc(75% - 4px),
+            var(--bg-divider) calc(75% - 4px), var(--bg-divider) calc(75% + 4px),
+            var(--bg-col-4) calc(75% + 4px), var(--bg-col-4) 100%
+        );
     background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 0.95;
 }
 
