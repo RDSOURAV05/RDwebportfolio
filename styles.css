@@ -805,11 +805,11 @@ body.light-theme .sun-icon {
     color: hsl(210, 40%, 98%) !important;
 }
 
-.timeline-intro-desc {
+.about-header-desc {
     font-size: 1.05rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .timeline-container {
