@@ -110,58 +110,104 @@
             <div class="container">
                 <span class="section-badge">About Me</span>
                 <h2 class="section-title">My Journey & Background</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h3 class="timeline-title">My Story</h3>
-                        <p>
+                
+                <!-- Part 1: Story & Bento Stats Grid -->
+                <div class="about-top-layout">
+                    <div class="about-story-card">
+                        <h3 class="about-subtitle">My Story</h3>
+                        <p class="about-paragraph">
                             I am a Computer Science and Artificial Intelligence student at Mar Baselios College of Engineering and Technology. I focus on merging computing principles with intelligent systems, working on projects ranging from relational databases to physical robotic architectures.
                         </p>
-                        <p>
+                        <p class="about-paragraph">
                             Beyond technical skills, I highly value leadership and communication, often coordinating team projects and student initiatives to drive collective success.
                         </p>
-                        <p>
+                        <p class="about-paragraph">
                             My academic journey began with 12 years of foundational schooling at Loyola School, Sreekariyam, which nurtured my early curiosity for technology, logical reasoning, and active student activities.
                         </p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Core Skills</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">3</span>
-                                <span class="stat-label">Academic Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Team Lead Roles</span>
-                            </div>
+                    </div>
+                    
+                    <div class="about-bento-grid">
+                        <!-- Stat 1 -->
+                        <div class="bento-card stat-bento">
+                            <i class="fa-solid fa-laptop-code bento-icon"></i>
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Core Skills</span>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="bento-card stat-bento">
+                            <i class="fa-solid fa-diagram-project bento-icon"></i>
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Academic Projects</span>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="bento-card stat-bento">
+                            <i class="fa-solid fa-people-group bento-icon"></i>
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Team Lead Roles</span>
+                        </div>
+                        <!-- Quote Bento Card -->
+                        <div class="bento-card quote-bento">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p class="bento-quote-text">Curiosity is the engine of achievement.</p>
                         </div>
                     </div>
-                    <div class="about-timeline">
-                        <h3 class="timeline-title">Education & Focus</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <span class="timeline-date">1st to 12th Grade</span>
+                </div>
+
+                <!-- Divider Line -->
+                <hr class="about-divider">
+
+                <!-- Part 2: Vertical Timeline Layout -->
+                <div class="about-bottom-layout">
+                    <div class="timeline-intro">
+                        <h3 class="about-subtitle">Education & Focus</h3>
+                        <p class="timeline-intro-desc">
+                            A chronological map of my academic foundation, hackathons, technical tracks, and current B.Tech engineering life.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-track"></div>
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-node">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1st to 12th Grade</div>
                                 <h4 class="timeline-role">School Education</h4>
-                                <p class="timeline-org">Loyola School, Sreekariyam</p>
+                                <span class="timeline-org">Loyola School, Sreekariyam</span>
                                 <p class="timeline-desc">Completed primary and secondary education with a strong emphasis on science, leadership values, and extracurricular participation.</p>
                             </div>
-                            <div class="timeline-item">
-                                <span class="timeline-date">Hackathons & Innovation</span>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-node">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Hackathons & Innovation</div>
                                 <h4 class="timeline-role">Solution Developer</h4>
-                                <p class="timeline-org">Smart India Hackathon & Sustainathon</p>
+                                <span class="timeline-org">Smart India Hackathon & Sustainathon</span>
                                 <p class="timeline-desc">Collaborating in intensive hackathon sprints to design and build prototype solutions for national and environmental challenges.</p>
                             </div>
-                            <div class="timeline-item">
-                                <span class="timeline-date">Core Track</span>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-node">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Core Track</div>
                                 <h4 class="timeline-role">Robotics & Database Engineering</h4>
-                                <p class="timeline-org">Self-directed & Lab projects</p>
+                                <span class="timeline-org">Self-directed & Lab projects</span>
                                 <p class="timeline-desc">Designing embedded micro-controller systems and relational query databases.</p>
                             </div>
-                            <div class="timeline-item">
-                                <span class="timeline-date">Active B.Tech Student</span>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-node">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Active B.Tech Student</div>
                                 <h4 class="timeline-role">Computer Science with AI</h4>
-                                <p class="timeline-org">Mar Baselios College of Engineering and Technology</p>
+                                <span class="timeline-org">Mar Baselios College of Engineering and Technology</span>
                                 <p class="timeline-desc">Engaged in deep coursework including Machine Learning, Artificial Intelligence, Robotics, and Database Management.</p>
                             </div>
                         </div>
