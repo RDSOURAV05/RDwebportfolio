@@ -314,62 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // INTERACTIVE PROFILE CODE CARD REVEAL
-    // ==========================================
-    const profileCard = document.getElementById('profile-card');
-    const clickPrompt = document.getElementById('click-prompt');
-    const triggerLine = document.getElementById('reveal-trigger-line');
-    
-    if (profileCard && clickPrompt) {
-        const revealElements = [
-            { el: document.getElementById('reveal-name'), delay: 0 },
-            { el: document.getElementById('reveal-college'), delay: 350 },
-            { el: document.getElementById('reveal-course'), delay: 700 },
-            { el: document.getElementById('reveal-skills'), delay: 1050 },
-            { el: document.getElementById('reveal-leadership'), delay: 1400 }
-        ];
-        
-        let hasRevealed = false;
-        
-        const triggerReveal = (e) => {
-            if (hasRevealed) return;
-            hasRevealed = true;
-            
-            // Prevent event double-firing if clicked on nested elements
-            if (e) {
-                e.stopPropagation();
-            }
-            
-            // Remove clickability classes and styles
-            profileCard.classList.remove('code-card-clickable');
-            if (triggerLine) {
-                triggerLine.classList.remove('code-line-clickable');
-            }
-            
-            // Hide prompt
-            clickPrompt.style.opacity = '0';
-            setTimeout(() => {
-                clickPrompt.style.display = 'none';
-            }, 200);
-            
-            // Reveal elements sequentially
-            revealElements.forEach(item => {
-                if (item.el) {
-                    setTimeout(() => {
-                        item.el.classList.add('revealed');
-                    }, item.delay);
-                }
-            });
-        };
-        
-        // Listeners for different parts of the card
-        profileCard.addEventListener('click', triggerReveal);
-        if (triggerLine) {
-            triggerLine.addEventListener('click', triggerReveal);
-        }
-        clickPrompt.addEventListener('click', triggerReveal);
-    }
+
 
     function setInputError(input, isError) {
         const group = input.parentElement;
