@@ -650,8 +650,6 @@ body.light-theme .sun-icon {
 
 /* Timeline */
 .about-timeline {
-    border-left: 1px solid var(--border-color);
-    padding-left: 2rem;
     position: relative;
 }
 
@@ -665,6 +663,9 @@ body.light-theme .sun-icon {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
+    position: relative;
 }
 
 .timeline-item {
@@ -674,7 +675,8 @@ body.light-theme .sun-icon {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -2.35rem;
+    left: -2rem;
+    transform: translateX(-50%);
     top: 0.25rem;
     width: 10px;
     height: 10px;
