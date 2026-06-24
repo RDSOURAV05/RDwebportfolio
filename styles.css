@@ -80,9 +80,14 @@ body {
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E🏠%3C/text%3E%3C/svg%3E"), auto;
 }
 
-/* Family-Themed Hover/Pointer Cursor */
+/* Custom Cursors */
 a, button, .btn, .filter-btn, .theme-toggle-btn, .mobile-toggle, .social-icon, .overlay-icon, .scroll-down, input[type="submit"], input[type="button"], select {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E❤️%3C/text%3E%3C/svg%3E"), pointer !important;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E🚶%3C/text%3E%3C/svg%3E"), pointer !important;
+}
+
+/* Custom Active (Clicking) Cursor */
+a:active, button:active, .btn:active, .filter-btn:active, .theme-toggle-btn:active, .mobile-toggle:active, .social-icon:active, .overlay-icon:active, .scroll-down:active, input[type="submit"]:active, input[type="button"]:active, select:active {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E🏃%3C/text%3E%3C/svg%3E"), pointer !important;
 }
 
 a {
