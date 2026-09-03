@@ -4,18 +4,18 @@
    DESIGN SYSTEM & VARIABLES
    ========================================== */
 :root {
-    /* Theme: Dark Mode (Default) - Stadium Football Pitch Base */
-    --bg-primary: hsl(140, 26%, 10%);
-    --bg-secondary: hsl(140, 26%, 14%);
-    --bg-card: hsla(140, 26%, 16%, 0.6);
-    --border-color: hsla(140, 20%, 90%, 0.08);
-    --text-primary: hsl(140, 20%, 98%);
-    --text-secondary: hsl(140, 10%, 75%);
+    /* Theme: Dark Mode (Default) - Men in Black / Executive Base */
+    --bg-primary: #050505;
+    --bg-secondary: #111111;
+    --bg-card: hsla(0, 0%, 12%, 0.8);
+    --border-color: hsla(0, 0%, 100%, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
     
-    /* Global Brand Tokens - Pitch Green & Stadium Gold */
-    --accent-color: hsl(140, 80%, 55%);
-    --accent-gradient: linear-gradient(135deg, hsl(140, 80%, 50%), hsl(42, 90%, 60%));
-    --accent-glow: hsla(140, 80%, 55%, 0.15);
+    /* Global Brand Tokens - Silver & Monochrome */
+    --accent-color: #ffffff;
+    --accent-gradient: linear-gradient(135deg, #ffffff, #777777);
+    --accent-glow: hsla(0, 0%, 100%, 0.15);
     
     --success: hsl(142, 70%, 45%);
     --error: hsl(350, 80%, 55%);
@@ -23,12 +23,12 @@
     /* Layout Tokens */
     --max-width: 1200px;
     --nav-height: 80px;
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.22), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
     
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -40,38 +40,38 @@
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* 4-Column Background Colors (Dark Theme) */
-    --bg-col-1: hsl(355, 50%, 12%);
-    --bg-col-2: hsl(224, 40%, 14%);
-    --bg-col-3: hsl(24, 45%, 12%);
-    --bg-col-4: hsl(140, 26%, 10%);
+    --bg-col-1: #020202;
+    --bg-col-2: #080808;
+    --bg-col-3: #0c0c0c;
+    --bg-col-4: #121212;
     --bg-divider: #000000;
-    --bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75));
+    --bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85));
 }
 
 /* Light Theme Overrides - Soft Turf Cream & Pitch Green */
 body.light-theme {
-    --bg-primary: hsl(140, 30%, 96%);
-    --bg-secondary: hsl(140, 20%, 90%);
-    --bg-card: hsla(140, 40%, 100%, 0.75);
-    --border-color: hsla(140, 40%, 20%, 0.08);
-    --text-primary: hsl(140, 40%, 12%);
-    --text-secondary: hsl(140, 20%, 42%);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f4;
+    --bg-card: hsla(0, 0%, 100%, 0.9);
+    --border-color: hsla(0, 0%, 0%, 0.1);
+    --text-primary: #111111;
+    --text-secondary: #555555;
     
-    --accent-color: hsl(140, 75%, 42%);
-    --accent-gradient: linear-gradient(135deg, hsl(140, 75%, 40%), hsl(38, 85%, 50%));
-    --accent-glow: hsla(140, 75%, 42%, 0.08);
+    --accent-color: #000000;
+    --accent-gradient: linear-gradient(135deg, #222222, #000000);
+    --accent-glow: hsla(0, 0%, 0%, 0.1);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     
     /* 4-Column Background Colors (Light Theme) */
-    --bg-col-1: hsl(355, 60%, 94%);
-    --bg-col-2: hsl(224, 50%, 94%);
-    --bg-col-3: hsl(24, 55%, 94%);
-    --bg-col-4: hsl(140, 30%, 94%);
+    --bg-col-1: #fdfdfd;
+    --bg-col-2: #f9f9f9;
+    --bg-col-3: #f5f5f5;
+    --bg-col-4: #f1f1f1;
     --bg-divider: #ffffff;
-    --bg-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.65));
+    --bg-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.85));
 }
 
 /* ==========================================
@@ -86,7 +86,6 @@ body.light-theme {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%F0%9F%9A%B6%3C/text%3E%3C/svg%3E"), auto;
 }
 
 body {
@@ -96,17 +95,11 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%F0%9F%9A%B6%3C/text%3E%3C/svg%3E"), auto;
 }
 
-/* Custom Cursors - Running on Hover */
+/* Default Pointers for Interactive Elements */
 a, button, .btn, .filter-btn, .theme-toggle-btn, .mobile-toggle, .social-icon, .overlay-icon, .scroll-down, input[type="submit"], input[type="button"], select {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%F0%9F%8F%83%3C/text%3E%3C/svg%3E"), pointer !important;
-}
-
-/* Custom Active (Clicking) Cursor - Stamping Footprints */
-a:active, button:active, .btn:active, .filter-btn:active, .theme-toggle-btn:active, .mobile-toggle:active, .social-icon:active, .overlay-icon:active, .scroll-down:active, input[type="submit"]:active, input[type="button"]:active, select:active {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%F0%9F%91%A3%3C/text%3E%3C/svg%3E"), pointer !important;
+    cursor: pointer;
 }
 
 a {
