@@ -155,19 +155,37 @@ button, input, textarea {
     height: 100%;
     z-index: -3;
     background-color: var(--bg-primary);
-    background-image: 
-        var(--bg-overlay),
-        linear-gradient(to right,
-            var(--bg-col-1) 0%, var(--bg-col-1) calc(25% - 4px),
-            var(--bg-divider) calc(25% - 4px), var(--bg-divider) calc(25% + 4px),
-            var(--bg-col-2) calc(25% + 4px), var(--bg-col-2) calc(50% - 4px),
-            var(--bg-divider) calc(50% - 4px), var(--bg-divider) calc(50% + 4px),
-            var(--bg-col-3) calc(50% + 4px), var(--bg-col-3) calc(75% - 4px),
-            var(--bg-divider) calc(75% - 4px), var(--bg-divider) calc(75% + 4px),
-            var(--bg-col-4) calc(75% + 4px), var(--bg-col-4) 100%
-        );
-    background-size: 100% 100%;
-    opacity: 0.95;
+    background-image: var(--bg-overlay);
+}
+
+.bg-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10vw;
+    width: 50vw;
+    height: 50vw;
+    transform: translateY(-50%);
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.06;
+}
+
+.bg-grid::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10vw;
+    width: 50vw;
+    height: 50vw;
+    transform: translateY(-50%);
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.06;
 }
 
 /* Trending Mouse Following Glow - Football Spotlight */
