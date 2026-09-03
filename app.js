@@ -1,230 +1,327 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     // ==========================================
-    // 1. KICK OFF INTRO SCREEN LOGIC
+    // THEME TOGGLE
     // ==========================================
-    const introScreen = document.getElementById('intro-screen');
-    const enterBtn = document.getElementById('enter-career-btn');
-    
-    // Check session storage so it only plays once per session
-    if (!sessionStorage.getItem('introPlayed')) {
-        enterBtn.addEventListener('click', () => {
-            introScreen.style.opacity = '0';
-            setTimeout(() => {
-                introScreen.style.display = 'none';
-                sessionStorage.setItem('introPlayed', 'true');
-            }, 800);
-        });
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme choice, default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
     } else {
-        introScreen.style.display = 'none';
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
     }
 
-    // ==========================================
-    // 2. NAVBAR & MOBILE TOGGLE
-    // ==========================================
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(3, 7, 18, 0.95)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+    themeToggleBtn.addEventListener('click', () => {
+        if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
         } else {
-            navbar.style.background = 'rgba(3, 7, 18, 0.9)';
-            navbar.style.boxShadow = 'none';
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
         }
     });
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+    // ==========================================
+    // MOBILE NAVIGATION MENU
+    // ==========================================
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('open');
+        navMenu.classList.toggle('open');
     });
 
-    navItems.forEach(link => {
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
+            mobileToggle.classList.remove('open');
+            navMenu.classList.remove('open');
         });
     });
 
     // ==========================================
-    // 3. SCROLL REVEAL & ATTRIBUTE BARS
+    // SCROLL NAVBAR STICKY
     // ==========================================
-    const revealElements = document.querySelectorAll('.reveal');
-    const attrFills = document.querySelectorAll('.attr-bar-fill');
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // ==========================================
+    // TYPEWRITER EFFECT
+    // ==========================================
+    const typewriterElement = document.getElementById('typewriter');
+    const titles = [
+        'Artificial Intelligence', 
+        'Robotics Systems', 
+        'Python & C Applications', 
+        'DBMS Integrations'
+    ];
+    
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeDelay = 100;
+
+    function type() {
+        const currentTitle = titles[titleIndex];
+        
+        if (isDeleting) {
+            typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
+            charIndex--;
+            typeDelay = 50; // Delete faster
+        } else {
+            typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
+            charIndex++;
+            typeDelay = 100;
+        }
+
+        // Handle transitions
+        if (!isDeleting && charIndex === currentTitle.length) {
+            typeDelay = 2000; // Pause at end of text
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            titleIndex = (titleIndex + 1) % titles.length;
+            typeDelay = 500; // Pause before typing next title
+        }
+
+        setTimeout(type, typeDelay);
+    }
+
+    if (typewriterElement) {
+        type();
+    }
+
+    // ==========================================
+    // SCROLL REVEAL ANIMATIONS
+    // ==========================================
+    const revealElements = document.querySelectorAll('.scroll-reveal');
     
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 
-                // If this is the attributes section, fill the bars
-                if (entry.target.classList.contains('attr-category')) {
-                    const bars = entry.target.querySelectorAll('.attr-bar-fill');
-                    bars.forEach(bar => {
-                        const width = bar.getAttribute('data-width');
-                        bar.style.width = width;
-                    });
+                // If it's the skills section, animate progress bars
+                if (entry.target.id === 'skills') {
+                    animateSkills();
                 }
                 
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Timeline fill
-    const timeline = document.querySelector('.journey-timeline');
-    const timelineProgress = document.getElementById('timeline-progress');
-    if (timeline && timelineProgress) {
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        timelineProgress.style.width = '100%';
-                    }, 500);
-                    timelineObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        timelineObserver.observe(timeline);
+    // Skill meters progress transition
+    function animateSkills() {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.transform = 'scaleX(0)';
+            // Force reflow
+            bar.getBoundingClientRect();
+            bar.style.transform = 'scaleX(1)';
+        });
     }
 
     // ==========================================
-    // 4. ACTIVE NAV STATE SYNC
+    // ACTIVE NAVIGATION LINK IN-VIEW SYNC
     // ==========================================
     const sections = document.querySelectorAll('section');
+    
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            if (window.scrollY >= (section.offsetTop - 200)) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
         });
-        navItems.forEach(link => {
+
+        navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#` + current) {
+            if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
             }
         });
     });
 
     // ==========================================
-    // 5. MATCH REPORT MODAL (PROJECTS)
+    // PROJECT FILTERING
     // ==========================================
-    const matchData = {
-        "1": {
-            title: "Smart College Bus Management",
-            tech: "React • Firebase • GPS API",
-            obj: "Solve the daily logistics challenge of coordinating college transport fleets by providing real-time data.",
-            features: [
-                "Live geolocation tracking of buses on campus.",
-                "Real-time routing and ETA updates for students.",
-                "Admin dashboard for fleet monitoring.",
-                "Responsive React UI paired with fast Firebase syncing."
-            ],
-            contrib: "Engineered the full frontend architecture and integrated GPS tracking logic. The result was a deployable system that drastically reduced student wait times.",
-            github: "https://github.com/RDSOURAV05/College_Bus_S6_Mini_Project",
-            demo: null
-        },
-        "2": {
-            title: "Tomato Leaf Disease Detector",
-            tech: "Python • Deep Learning • CNN",
-            obj: "Aid agricultural sustainability by automating the early detection of crop diseases using computer vision.",
-            features: [
-                "Custom Convolutional Neural Network trained on leaf image datasets.",
-                "High accuracy classification of multiple disease types.",
-                "Image preprocessing pipeline for robust feature extraction."
-            ],
-            contrib: "Developed and trained the core deep learning model in Python, optimizing the CNN architecture for high validation accuracy resulting in a reliable diagnostic tool.",
-            github: "https://github.com/RDSOURAV05/Tomato_leaf_disease_ID",
-            demo: null
-        },
-        "3": {
-            title: "JRJS Clinical Assistant & Portal",
-            tech: "LangGraph • RAG • AI Agents",
-            obj: "Modernize hospital triage and appointment booking with an intelligent, multi-node RAG conversational agent.",
-            features: [
-                "Multi-node LangGraph agent flow for complex clinical reasoning.",
-                "RAG-powered chatbot utilizing medical guidelines.",
-                "Seamless appointment triage interface."
-            ],
-            contrib: "Architected the LangGraph state machine and integrated the RAG search tools. Resulted in a highly interactive, intelligent healthcare portal deployed live.",
-            github: "https://github.com/RDSOURAV05/ai-powered-hospital-appointment",
-            demo: "https://rdsourav05.github.io/ai-powered-hospital-appointment/"
-        },
-        "4": {
-            title: "Blood Donation Management",
-            tech: "Python • Flask • MySQL",
-            obj: "Bridge the gap between donors, hospitals, and blood banks during emergencies to save lives efficiently.",
-            features: [
-                "Centralized inventory management for blood banks.",
-                "Emergency request coordination system.",
-                "Secure MySQL relational database for donor matching.",
-                "Flask backend routing and API architecture."
-            ],
-            contrib: "Built the relational database schema and Flask backend, creating a robust, transactional platform for critical healthcare coordination.",
-            github: "https://github.com/RDSOURAV05/Blood_connect",
-            demo: null
-        }
-    };
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    const modal = document.getElementById('match-modal');
-    const modalClose = document.querySelector('.modal-close');
-    const matchCards = document.querySelectorAll('.match-card');
-    
-    // Modal elements
-    const mTitle = document.getElementById('modal-title');
-    const mTech = document.getElementById('modal-tech');
-    const mObj = document.getElementById('modal-obj');
-    const mFeatures = document.getElementById('modal-features');
-    const mContrib = document.getElementById('modal-contrib');
-    const mLinks = document.getElementById('modal-links');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from buttons and add to clicked
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
-    matchCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const id = card.getAttribute('data-project');
-            const data = matchData[id];
-            if(!data) return;
+            const filterValue = button.getAttribute('data-filter');
 
-            // Populate data
-            mTitle.textContent = data.title;
-            mTech.textContent = data.tech;
-            mObj.textContent = data.obj;
-            mContrib.textContent = data.contrib;
-            
-            mFeatures.innerHTML = '';
-            data.features.forEach(f => {
-                const li = document.createElement('li');
-                li.textContent = f;
-                mFeatures.appendChild(li);
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    card.classList.remove('hide');
+                    // Small delay to trigger entry animation
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    // Delay setting display none until transitions finish
+                    setTimeout(() => {
+                        card.classList.add('hide');
+                    }, 300);
+                }
             });
-
-            mLinks.innerHTML = '';
-            if(data.github) {
-                mLinks.innerHTML += `<a href="${data.github}" target="_blank" class="btn btn-primary"><span><i class="fa-brands fa-github"></i> GITHUB</span></a>`;
-            }
-            if(data.demo) {
-                mLinks.innerHTML += `<a href="${data.demo}" target="_blank" class="btn btn-secondary"><span><i class="fa-solid fa-arrow-up-right-from-square"></i> LIVE DEMO</span></a>`;
-            }
-
-            // Show modal
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // prevent bg scroll
         });
     });
 
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
+    // ==========================================
+    // CONTACT FORM VALIDATION & SIMULATION
+    // ==========================================
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
 
-    modal.addEventListener('click', (e) => {
-        if(e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Clean up status
+            formStatus.className = 'form-status';
+            formStatus.style.display = 'none';
+            formStatus.textContent = '';
+            
+            let isValid = true;
+            
+            // Validate inputs
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            // Name check
+            if (!nameInput.value.trim()) {
+                setInputError(nameInput, true);
+                isValid = false;
+            } else {
+                setInputError(nameInput, false);
+            }
+            
+            // Email check
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+                setInputError(emailInput, true);
+                isValid = false;
+            } else {
+                setInputError(emailInput, false);
+            }
+            
+            // Subject check
+            if (!subjectInput.value.trim()) {
+                setInputError(subjectInput, true);
+                isValid = false;
+            } else {
+                setInputError(subjectInput, false);
+            }
+            
+            // Message check
+            if (!messageInput.value.trim()) {
+                setInputError(messageInput, true);
+                isValid = false;
+            } else {
+                setInputError(messageInput, false);
+            }
+            
+            if (isValid) {
+                // Mock submission state
+                const submitBtn = contactForm.querySelector('.form-submit');
+                const originalBtnContent = submitBtn.innerHTML;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+                
+                // Simulate network latency (1.5 seconds)
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnContent;
+                    
+                    // Show success status
+                    formStatus.classList.add('success');
+                    formStatus.textContent = 'Thank you! Your message was sent successfully.';
+                    formStatus.style.display = 'block';
+                    
+                    // Reset inputs
+                    contactForm.reset();
+                    document.querySelectorAll('.form-group').forEach(grp => grp.classList.remove('invalid'));
+                }, 1500);
+            }
+        });
+
+        // Add blur listeners for realtime validation feedback
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                if (input.id === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    setInputError(input, !input.value.trim() || !emailRegex.test(input.value.trim()));
+                } else {
+                    setInputError(input, !input.value.trim());
+                }
+            });
+            
+            // Remove error highlight as user types
+            input.addEventListener('input', () => {
+                setInputError(input, false);
+            });
+        });
+    }
+
+    // ==========================================
+    // MOUSE FOLLOW GLOW EFFECT
+    // ==========================================
+    const mouseGlow = document.querySelector('.mouse-glow');
+    if (mouseGlow) {
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        });
+    }
+
+
+
+    function setInputError(input, isError) {
+        const group = input.parentElement;
+        if (isError) {
+            group.classList.add('invalid');
+        } else {
+            group.classList.remove('invalid');
         }
-    });
-
+    }
 });
