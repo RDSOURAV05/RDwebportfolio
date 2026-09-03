@@ -14,7 +14,7 @@
     
     /* Global Brand Tokens - Silver & Monochrome */
     --accent-color: #ffffff;
-    --accent-gradient: linear-gradient(135deg, #ffffff, #777777);
+    --accent-gradient: linear-gradient(135deg, #ffffff, #d4d4d4);
     --accent-glow: hsla(0, 0%, 100%, 0.15);
     
     --success: hsl(142, 70%, 45%);
@@ -545,7 +545,7 @@ body.light-theme .sun-icon {
 }
 
 .rainbow-text {
-    background: linear-gradient(to right, #ff5f56, #ffbd2e, #27c93f, #61dafb, #b5179e, #ff5f56);
+    background: linear-gradient(to right, #ffffff, #888888, #ffffff, #dddddd, #ffffff);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ body.light-theme .sun-icon {
     content: '';
     position: absolute;
     inset: -15px;
-    background: linear-gradient(135deg, var(--accent-color), hsl(42, 90%, 60%));
+    background: linear-gradient(135deg, var(--accent-color), #444444);
     border-radius: calc(var(--radius-md) + 15px);
     z-index: -1;
     filter: blur(35px);
