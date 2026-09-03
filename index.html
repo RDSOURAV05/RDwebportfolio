@@ -3,216 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R D Sourav | Computer Science & AI Student</title>
-    <meta name="description" content="Portfolio of R D Sourav, a Computer Science & AI student specializing in Python, C, Robotics, and Database Management.">
-    <!-- Google Fonts -->
+    <title>R D Sourav | Premium Software Engineer Portfolio</title>
+    
+    <!-- Fonts: Outfit (Headings) and Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Main Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-theme">
-    <!-- Background Decoration Grid & Gradients -->
-    <div class="bg-grid"></div>
-    <div class="mouse-glow"></div>
-    <div class="noise-overlay"></div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+<body>
+    <!-- Abstract Background -->
+    <div class="bg-abstract"></div>
+    <div class="bg-orb bg-orb-rm"></div>
+    <div class="bg-orb bg-orb-mu"></div>
 
-    <!-- Navigation Header -->
-    <header id="header" class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-accent">&lt;</span>Sourav<span class="logo-accent">/&gt;</span>
-            </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <!-- Theme Toggle Switch -->
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-                    <i class="fa-solid fa-moon moon-icon"></i>
-                    <i class="fa-solid fa-sun sun-icon"></i>
-                </button>
-                
-                <!-- Mobile Navigation Toggle -->
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
+            <div class="nav-logo">R D <span>Sourav</span></div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#timeline" class="nav-link">Journey</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container hero-container">
+        <section id="hero" class="hero-section scroll-reveal">
+            <div class="container">
                 <div class="hero-content">
-                    <div class="hero-profile-container">
-                        <div class="hero-profile-glow"></div>
-                        <img src="assets/profile.png" alt="R D Sourav" class="hero-profile-img">
-                    </div>
-                    <span class="hero-badge">Computer Science with AI Student</span>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">R D Sourav</span>
-                    </h1>
-                    <h2 class="hero-subtitle rainbow-text">I AM AN ENGINEER</h2>
+                    <span class="hero-badge"><i class="fa-solid fa-code"></i> Developer Portfolio</span>
+                    <h1 class="hero-title">Hi, I'm <span class="accent-text-gold">R D Sourav</span></h1>
+                    <p class="hero-desc">
+                        Computer Engineering Student | Software Developer | Problem Solver
+                        <br><br>
+                        Merging sophisticated software engineering with high-performance execution. Specialized in Artificial Intelligence, Web Development, and complex problem-solving.
+                    </p>
                     <div class="hero-ctas">
-                        <a href="#projects" class="btn btn-primary">Projects <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn btn-secondary">Contact</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="visual-card">
-                        <div class="card-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <pre class="code-editor"><code><span class="code-keyword">const</span> <span class="code-variable">fan</span> = {
-  name: <span class="code-string">'R D Sourav'</span>,
-  role: <span class="code-string">'Software Engineer'</span>,
-  skills: [<span class="code-string">'Python'</span>, <span class="code-string">'AI'</span>, <span class="code-string">'Robotics'</span>],
-  motto: <span class="code-string">'Hala Madrid & GGMU'</span>
-};
- 
-<span class="code-keyword">function</span> <span class="code-function">getPassion</span>() {
-  <span class="code-keyword">return</span> <span class="code-string">'Engineering & Beautiful Football'</span>;
-}</code></pre>
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-laptop-code"></i> View My Work</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fa-regular fa-paper-plane"></i> Let's Connect</a>
                     </div>
                 </div>
             </div>
-            <a href="#about" class="scroll-down" aria-label="Scroll Down">
-                <span class="mouse-icon">
-                    <span class="wheel"></span>
-                </span>
-            </a>
         </section>
 
-        <!-- About Section -->
+        <!-- About / Bento Section -->
         <section id="about" class="about-section scroll-reveal">
             <div class="container">
-                <span class="section-badge">About Me</span>
-                <h2 class="section-title">My Journey & Background</h2>
-                
-                <div class="about-grid-main">
-                    <!-- Left Column: Story & Bento Stats -->
-                    <div class="about-left-col">
-                        <div class="about-header">
-                            <h3 class="about-subtitle">My Story</h3>
-                            <p class="about-header-desc">
-                                A summary of my personal journey, core motivation, and student values.
-                            </p>
-                        </div>
-                        
-                        <div class="about-story-card">
-                            <p class="about-paragraph">
-                                I am a Computer Science and Artificial Intelligence student at Mar Baselios College of Engineering and Technology. I focus on merging computing principles with intelligent systems, working on projects ranging from relational databases to physical robotic architectures.
-                            </p>
-                            <p class="about-paragraph">
-                                Beyond technical skills, I highly value leadership and communication, often coordinating team projects and student initiatives to drive collective success.
-                            </p>
-                            <p class="about-paragraph">
-                                My academic journey began with 12 years of foundational schooling at Loyola School, Sreekariyam, which nurtured my early curiosity for technology, logical reasoning, and active student activities.
-                            </p>
-                        </div>
-                        
-                        <div class="about-bento-grid">
-                            <!-- Stat 1 -->
-                            <div class="bento-card stat-bento">
-                                <i class="fa-solid fa-laptop-code bento-icon"></i>
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Core Skills</span>
-                            </div>
-                            <!-- Stat 2 -->
-                            <div class="bento-card stat-bento">
-                                <i class="fa-solid fa-diagram-project bento-icon"></i>
-                                <span class="stat-number">5</span>
-                                <span class="stat-label">Academic Projects</span>
-                            </div>
-                            <!-- Stat 3 -->
-                            <div class="bento-card stat-bento">
-                                <i class="fa-solid fa-people-group bento-icon"></i>
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Team Lead Roles</span>
-                            </div>
-                            <!-- Quote Bento Card -->
-                            <div class="bento-card quote-bento">
-                                <i class="fa-solid fa-quote-left quote-icon"></i>
-                                <p class="bento-quote-text">Curiosity is the engine of achievement.</p>
-                            </div>
-                        </div>
+                <div class="about-split">
+                    <div class="about-text">
+                        <h2 class="section-title" style="text-align: left;">Engineered for <span class="accent-text-red">Impact</span></h2>
+                        <p>
+                            I am a technically ambitious computer engineering student driven by a competitive attitude and an eye for detail. I build robust systems and intelligent applications that deliver real-world impact.
+                        </p>
+                        <p>
+                            Inspired by the tactical precision of top-tier football, I believe in elegant architectures and relentless execution. Whether it's training machine learning models or deploying full-stack web platforms, I strive for championship-level quality.
+                        </p>
                     </div>
-
-                    <!-- Right Column: Education & Timeline -->
-                    <div class="about-right-col">
-                        <div class="about-header">
-                            <h3 class="about-subtitle">Education & Focus</h3>
-                            <p class="about-header-desc">
-                                A chronological map of my academic foundation, hackathons, and B.Tech life.
-                            </p>
+                    <div class="bento-grid">
+                        <div class="bento-card">
+                            <i class="fa-solid fa-microchip bento-icon"></i>
+                            <h3 class="bento-title">Computer Engineering</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Core principles and architecture.</p>
                         </div>
-                        
-                        <div class="timeline-container">
-                            <div class="timeline-track"></div>
-                            
-                            <!-- Timeline Item 1 -->
-                            <div class="timeline-node">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-date">1st to 12th Grade</div>
-                                    <h4 class="timeline-role">School Education</h4>
-                                    <span class="timeline-org">Loyola School, Sreekariyam</span>
-                                    <p class="timeline-desc">Completed primary and secondary education with a strong emphasis on science, leadership values, and extracurricular participation.</p>
-                                </div>
-                            </div>
-
-                            <!-- Timeline Item 2 -->
-                            <div class="timeline-node">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Hackathons & Innovation</div>
-                                    <h4 class="timeline-role">Solution Developer</h4>
-                                    <span class="timeline-org">Smart India Hackathon & Sustainathon</span>
-                                    <p class="timeline-desc">Collaborating in intensive hackathon sprints to design and build prototype solutions for national and environmental challenges.</p>
-                                </div>
-                            </div>
-
-                            <!-- Timeline Item 3 -->
-                            <div class="timeline-node">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Core Track</div>
-                                    <h4 class="timeline-role">Robotics & Database Engineering</h4>
-                                    <span class="timeline-org">Self-directed & Lab projects</span>
-                                    <p class="timeline-desc">Designing embedded micro-controller systems and relational query databases.</p>
-                                </div>
-                            </div>
-
-                            <!-- Timeline Item 4 -->
-                            <div class="timeline-node">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Active B.Tech Student</div>
-                                    <h4 class="timeline-role">Computer Science with AI</h4>
-                                    <span class="timeline-org">Mar Baselios College of Engineering and Technology</span>
-                                    <p class="timeline-desc">Engaged in deep coursework including Machine Learning, Artificial Intelligence, Robotics, and Database Management.</p>
-                                </div>
-                            </div>
+                        <div class="bento-card">
+                            <i class="fa-solid fa-brain bento-icon"></i>
+                            <h3 class="bento-title">AI / ML</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Intelligent data solutions.</p>
+                        </div>
+                        <div class="bento-card">
+                            <i class="fa-solid fa-globe bento-icon"></i>
+                            <h3 class="bento-title">Web Development</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Responsive modern platforms.</p>
+                        </div>
+                        <div class="bento-card">
+                            <i class="fa-solid fa-puzzle-piece bento-icon"></i>
+                            <h3 class="bento-title">Problem Solving</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Tactical execution & algorithms.</p>
                         </div>
                     </div>
                 </div>
@@ -222,68 +102,93 @@
         <!-- Skills Section -->
         <section id="skills" class="skills-section scroll-reveal">
             <div class="container">
-                <span class="section-badge">My Stack</span>
-                <h2 class="section-title">Technical & Professional Expertise</h2>
-                <p class="section-desc">Here are the technical and interpersonal capabilities I deploy to build software and coordinate teams.</p>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-subtitle">Precision tools and technologies for robust development.</p>
                 
                 <div class="skills-grid">
-                    <div class="skills-category-card">
-                        <div class="category-header">
+                    <!-- Programming -->
+                    <div class="skill-category">
+                        <div class="skill-header">
                             <i class="fa-solid fa-code"></i>
-                            <h3>Programming Languages</h3>
+                            <h3>Programming</h3>
                         </div>
-                        <ul class="skills-list">
-                            <li>
-                                <div class="skill-info"><span>Python</span><span>70%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-                            </li>
-                            <li>
-                                <div class="skill-info"><span>C Programming</span><span>64%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 64%"></div></div>
-                            </li>
-                        </ul>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-python"></i></div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-js"></i></div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-c"></i></div>
+                                <span class="skill-name">C / C++</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="skills-category-card">
-                        <div class="category-header">
-                            <i class="fa-solid fa-robot"></i>
-                            <h3>Core Engineering</h3>
+                    <!-- Web Dev -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>Web Development</h3>
                         </div>
-                        <ul class="skills-list">
-                            <li>
-                                <div class="skill-info"><span>Robotics Systems</span><span>68%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 68%"></div></div>
-                            </li>
-                            <li>
-                                <div class="skill-info"><span>Database Management Systems (DBMS)</span><span>65%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
-                            </li>
-                            <li>
-                                <div class="skill-info"><span>Artificial Intelligence Foundations</span><span>58%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 58%"></div></div>
-                            </li>
-                        </ul>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-html5"></i></div>
+                                <span class="skill-name">HTML / CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-react"></i></div>
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-node-js"></i></div>
+                                <span class="skill-name">Node.js / Express</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="skills-category-card">
-                        <div class="category-header">
-                            <i class="fa-solid fa-users"></i>
-                            <h3>Leadership & Communication</h3>
+                    <!-- AI / ML -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <h3>AI / Machine Learning</h3>
                         </div>
-                        <ul class="skills-list">
-                            <li>
-                                <div class="skill-info"><span>Leadership & Team Orchestration</span><span>75%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
-                            </li>
-                            <li>
-                                <div class="skill-info"><span>Communication Skills</span><span>78%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 78%"></div></div>
-                            </li>
-                            <li>
-                                <div class="skill-info"><span>Collaboration & Presentation</span><span>72%</span></div>
-                                <div class="progress-bar"><div class="progress" style="width: 72%"></div></div>
-                            </li>
-                        </ul>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-solid fa-brain"></i></div>
+                                <span class="skill-name">Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                                <span class="skill-name">Deep Learning (CNN / RNN)</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-solid fa-language"></i></div>
+                                <span class="skill-name">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DB / Tools -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Database & Tools</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-solid fa-database"></i></div>
+                                <span class="skill-name">MySQL & MongoDB</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-github"></i></div>
+                                <span class="skill-name">Git & GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon-box"><i class="fa-brands fa-docker"></i></div>
+                                <span class="skill-name">Docker</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -292,135 +197,149 @@
         <!-- Projects Section -->
         <section id="projects" class="projects-section scroll-reveal">
             <div class="container">
-                <span class="section-badge">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Projects That Made The Difference</h2>
+                <p class="section-subtitle">From tactical ideation to elite execution.</p>
                 
-                <!-- Project Filters -->
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="ai">AI & Python</button>
-                    <button class="filter-btn" data-filter="db">Database & DBMS</button>
-                </div>
-
-                <!-- Projects Grid -->
                 <div class="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-card" data-category="ai">
-                        <div class="project-image-wrapper">
-                            <img src="assets/project1_v2.png" alt="Real-Time Mobile Location Tracker" class="project-image">
-                            <div class="project-overlay">
-                                <a href="https://github.com/RDSOURAV05" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository" title="https://github.com/RDSOURAV05"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/bg5.webp" alt="Smart College Bus" class="project-image">
                         </div>
-                        <div class="project-info">
-                            <span class="project-meta">Python / Geolocation API</span>
-                            <h3 class="project-card-title">Real-Time Mobile Location Tracker</h3>
-                            <p class="project-card-desc">
-                                A security-focused Python geolocation tracker that retrieves real-time mobile GPS coordinates and overlays them dynamically on an interactive map interface, supporting geofencing alerts and remote location mapping.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Geolocation API</span>
-                                <span class="tag">Maps</span>
-                                <span class="tag">Sandbox Integration</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Smart College Bus Management</h3>
+                            <p class="project-desc">A GPS-enabled transit tracking platform offering live geolocation and routing efficiency for college fleets. Built with React and Firebase.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">GPS API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/RDSOURAV05/College_Bus_S6_Mini_Project" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 2 -->
-                    <div class="project-card" data-category="db">
-                        <div class="project-image-wrapper">
-                            <img src="assets/project2_v2.png" alt="Smart College Bus Management System" class="project-image">
-                            <div class="project-overlay">
-                                <a href="https://github.com/RDSOURAV05/College_Bus_S6_Mini_Project" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository" title="https://github.com/RDSOURAV05/College_Bus_S6_Mini_Project"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project3.png" alt="Tomato Leaf Disease Detector" class="project-image">
                         </div>
-                        <div class="project-info">
-                            <span class="project-meta">Database / DBMS</span>
-                            <h3 class="project-card-title">Smart College Bus Management System</h3>
-                            <p class="project-card-desc">
-                                A robust relational database and scheduling application designed to automate transit routing, optimize passenger capacities, and dispatch real-time schedule updates for campus fleets.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">DBMS</span>
-                                <span class="tag">SQL</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Relational Database</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Tomato Leaf Disease Detector</h3>
+                            <p class="project-desc">An agricultural computer vision model leveraging deep CNNs to classify leaf anomalies and detect diseases early.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tech-tag">CNN</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/RDSOURAV05/Tomato_leaf_disease_ID" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 3 -->
-                    <div class="project-card" data-category="ai">
-                        <div class="project-image-wrapper">
-                            <img src="assets/project3_v2.png" alt="Tomato Leaf Disease Detection" class="project-image">
-                            <div class="project-overlay">
-                                <a href="https://github.com/RDSOURAV05/Tomato_leaf_disease_ID" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository" title="https://github.com/RDSOURAV05/Tomato_leaf_disease_ID"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project4_v2.png" alt="JRJS Hospital AI" class="project-image">
                         </div>
-                        <div class="project-info">
-                            <span class="project-meta">AI / Deep Learning</span>
-                            <h3 class="project-card-title">Tomato Leaf Disease Detector</h3>
-                            <p class="project-card-desc">
-                                An agricultural AI computer vision application leveraging deep convolutional neural networks (CNN) to classify leaf anomalies and detect tomato plant diseases early, helping farmers protect crop yields.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Deep Learning</span>
-                                <span class="tag">CNN</span>
-                                <span class="tag">Computer Vision</span>
+                        <div class="project-content">
+                            <h3 class="project-title">JRJS Clinical Assistant & Portal</h3>
+                            <p class="project-desc">A healthcare portal utilizing a multi-node LangGraph agent flow and RAG chatbot for retrieving medical guidelines and triaging appointments.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">LangGraph</span>
+                                <span class="tech-tag">RAG Search</span>
+                                <span class="tech-tag">AI Agent</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/RDSOURAV05/ai-powered-hospital-appointment" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://rdsourav05.github.io/ai-powered-hospital-appointment/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 4 -->
-                    <div class="project-card" data-category="ai">
-                        <div class="project-image-wrapper">
-                            <img src="assets/project4_v2.png" alt="JRJS Hospital AI Assistant" class="project-image">
-                            <div class="project-overlay">
-                                <a href="https://github.com/RDSOURAV05/ai-powered-hospital-appointment" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository" title="https://github.com/RDSOURAV05/ai-powered-hospital-appointment"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://rdsourav05.github.io/ai-powered-hospital-appointment/" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="Live Demo" title="https://rdsourav05.github.io/ai-powered-hospital-appointment/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project5_v2.png" alt="Blood Donation System" class="project-image">
                         </div>
-                        <div class="project-info">
-                            <span class="project-meta">AI Agents / LangGraph</span>
-                            <h3 class="project-card-title">JRJS Clinical Assistant & Portal</h3>
-                            <p class="project-card-desc">
-                                A healthcare portal simulating a multi-node LangGraph agent flow. Features a RAG chatbot retrieving medical library guidelines and a clinic dashboard for booking and triaging patient appointments.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">LangGraph</span>
-                                <span class="tag">RAG Search</span>
-                                <span class="tag">AI Agent</span>
-                                <span class="tag">JavaScript</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Blood Donation Management</h3>
+                            <p class="project-desc">A Flask and MySQL platform bridging donors, hospitals, and blood banks to coordinate emergency requests and automate inventory.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/RDSOURAV05/Blood_connect" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Project 5 -->
-                    <div class="project-card" data-category="db">
-                        <div class="project-image-wrapper">
-                            <img src="assets/project5_v2.png" alt="Blood Donation Management System" class="project-image">
-                            <div class="project-overlay">
-                                <a href="https://github.com/RDSOURAV05/Blood_connect" target="_blank" rel="noopener noreferrer" class="overlay-icon" aria-label="GitHub Repository" title="https://github.com/RDSOURAV05/Blood_connect"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="overlay-icon" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+        <!-- Development Timeline Section -->
+        <section id="timeline" class="timeline-section scroll-reveal">
+            <div class="container">
+                <h2 class="section-title">The Development Journey</h2>
+                <p class="section-subtitle">Experience & Education Mapping</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Phase 1: Kickoff</div>
+                        <h4 class="timeline-title">Core Fundamentals</h4>
+                        <span class="timeline-org">Loyola School</span>
+                        <p class="timeline-desc">Established a strong foundation in science, analytical thinking, and leadership values.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Phase 2: Learning</div>
+                        <h4 class="timeline-title">B.Tech in Computer Science & AI</h4>
+                        <span class="timeline-org">Mar Baselios College of Engineering and Technology</span>
+                        <p class="timeline-desc">Engaged in advanced coursework encompassing AI, ML, software architecture, and database engineering.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Phase 3: Building & Experimenting</div>
+                        <h4 class="timeline-title">Robotics & Full-Stack Development</h4>
+                        <span class="timeline-org">Self-Directed Research</span>
+                        <p class="timeline-desc">Designed embedded microcontroller systems and scalable full-stack web platforms integrating complex APIs.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Phase 4: Deploying</div>
+                        <h4 class="timeline-title">Hackathon Solution Developer</h4>
+                        <span class="timeline-org">Smart India Hackathon</span>
+                        <p class="timeline-desc">Collaborated in intensive sprints to deploy prototype solutions for national-scale problems under pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section scroll-reveal">
+            <div class="container">
+                <h2 class="section-title">Trophy Cabinet</h2>
+                <p class="section-subtitle">Milestones and certifications that mark the journey.</p>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-trophy"></i>
                         </div>
-                        <div class="project-info">
-                            <span class="project-meta">Python / Flask / MySQL</span>
-                            <h3 class="project-card-title">Blood Donation Management System</h3>
-                            <p class="project-card-desc">
-                                A Flask and MySQL platform bridging the gap between donors, hospitals, and blood banks. Coordinates emergency real-time requests and automates inventory tracking during critical blood shortages.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                                <span class="tag">MySQL</span>
-                                <span class="tag">Donor Management</span>
-                            </div>
+                        <div class="achievement-content">
+                            <h4>Hackathon Finalist</h4>
+                            <p>Recognized for outstanding prototype development and teamwork during a major coding sprint.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>AI & Machine Learning Certification</h4>
+                            <p>Completed intensive training in neural networks and intelligent data solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -430,35 +349,16 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section scroll-reveal">
             <div class="container">
-                <span class="section-badge">Get In Touch</span>
-                <h2 class="section-title">Let's Connect</h2>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p>Feel free to reach out for any projects, collaborations, or just to say hello. I'm always open to connecting and sharing ideas!</p>
-                        
-                        <div class="contact-methods">
-                            <div class="method-item">
-                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
-                                <div>
-                                    <span class="method-label">Email Me</span>
-                                    <a href="mailto:iamsouravrd@gmail.com" class="method-link">iamsouravrd@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="method-item">
-                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
-                                <div>
-                                    <span class="method-label">College Location</span>
-                                    <span class="method-text">Trivandrum, Kerala, India</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="https://github.com/RDSOURAV05" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="https://github.com/RDSOURAV05"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/r-d-sourav-rd9061/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="https://www.linkedin.com/in/r-d-sourav-rd9061/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
+                <div class="contact-content">
+                    <h2 class="section-title">Ready for the Next Kickoff?</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        Whether it's a challenging new project, an open role, or just a tactical discussion about tech, I'm ready to step onto the pitch.
+                    </p>
+                    <a href="mailto:iamsouravrd@gmail.com" class="btn btn-primary" style="margin-bottom: 1rem;"><i class="fa-solid fa-envelope"></i> iamsouravrd@gmail.com</a>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/RDSOURAV05" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/r-d-sourav-rd9061/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -468,14 +368,43 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p class="copyright">&copy; 2026 R D Sourav. Built with ❤️ and Vanilla CSS.</p>
-            <div class="footer-links">
-                <a href="#hero">Back to top</a>
+            <p class="footer-text">&copy; 2026 R D Sourav. Built with passion, precision & a little football.</p>
+            <div class="footer-symbols">
+                <i class="fa-solid fa-crown"></i>
+                <i class="fa-solid fa-shield-halved"></i>
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-regular fa-futbol"></i>
             </div>
         </div>
     </footer>
 
-    <!-- App Logic Script -->
+    <!-- Script -->
     <script src="app.js"></script>
+    <script>
+        // Simple Navbar Scroll Effect & Mobile Toggle
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
+
