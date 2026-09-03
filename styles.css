@@ -4,28 +4,28 @@
    DESIGN SYSTEM & VARIABLES
    ========================================== */
 :root {
-    /* Theme: Dark Mode (Default) - Men in Black / Executive Base */
-    --bg-primary: #050505;
-    --bg-secondary: #111111;
-    --bg-card: hsla(0, 0%, 12%, 0.8);
-    --border-color: hsla(0, 0%, 100%, 0.1);
+    /* Theme: Dark Mode (Default) - Man Utd Base & Real Madrid Accents */
+    --bg-primary: #0a0202;
+    --bg-secondary: #140505;
+    --bg-card: hsla(0, 70%, 8%, 0.8);
+    --border-color: hsla(43, 62%, 50%, 0.2);
     --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
+    --text-secondary: #d1d1d1;
     
-    /* Global Brand Tokens - Silver & Monochrome */
-    --accent-color: #ffffff;
-    --accent-gradient: linear-gradient(135deg, #ffffff, #d4d4d4);
-    --accent-glow: hsla(0, 0%, 100%, 0.15);
+    /* Global Brand Tokens - RM Gold & MU Red */
+    --accent-color: #cda434;
+    --accent-gradient: linear-gradient(135deg, #cda434, #da291c);
+    --accent-glow: hsla(43, 62%, 50%, 0.25);
     
     --success: hsl(142, 70%, 45%);
-    --error: hsl(350, 80%, 55%);
+    --error: #da291c;
     
-    /* Layout Tokens */
+    /* Layout Tokens (Stadium Curves) */
     --max-width: 1200px;
     --nav-height: 80px;
-    --radius-sm: 2px;
-    --radius-md: 4px;
-    --radius-lg: 8px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
@@ -39,39 +39,39 @@
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* 4-Column Background Colors (Dark Theme) */
-    --bg-col-1: #020202;
-    --bg-col-2: #080808;
-    --bg-col-3: #0c0c0c;
-    --bg-col-4: #121212;
+    /* 4-Column Background Colors (Dark Theme - Old Trafford Vibe) */
+    --bg-col-1: #0d0101;
+    --bg-col-2: #140505;
+    --bg-col-3: #1a0808;
+    --bg-col-4: #0a0202;
     --bg-divider: #000000;
-    --bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85));
+    --bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(10, 2, 2, 0.85));
 }
 
-/* Light Theme Overrides - Soft Turf Cream & Pitch Green */
+/* Light Theme Overrides - Real Madrid Bernabeu Base */
 body.light-theme {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f4f4f4;
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
     --bg-card: hsla(0, 0%, 100%, 0.9);
-    --border-color: hsla(0, 0%, 0%, 0.1);
+    --border-color: hsla(43, 62%, 50%, 0.3);
     --text-primary: #111111;
-    --text-secondary: #555555;
+    --text-secondary: #444444;
     
-    --accent-color: #000000;
-    --accent-gradient: linear-gradient(135deg, #222222, #000000);
-    --accent-glow: hsla(0, 0%, 0%, 0.1);
+    --accent-color: #da291c;
+    --accent-gradient: linear-gradient(135deg, #da291c, #cda434);
+    --accent-glow: hsla(353, 70%, 48%, 0.15);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     
     /* 4-Column Background Colors (Light Theme) */
-    --bg-col-1: #fdfdfd;
-    --bg-col-2: #f9f9f9;
-    --bg-col-3: #f5f5f5;
-    --bg-col-4: #f1f1f1;
-    --bg-divider: #ffffff;
-    --bg-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.85));
+    --bg-col-1: #ffffff;
+    --bg-col-2: #fdfdfd;
+    --bg-col-3: #f9f9f9;
+    --bg-col-4: #f4f4f4;
+    --bg-divider: #ebebeb;
+    --bg-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9));
 }
 
 /* ==========================================
@@ -86,6 +86,7 @@ body.light-theme {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E"), auto;
 }
 
 body {
@@ -95,11 +96,12 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E"), auto;
 }
 
-/* Default Pointers for Interactive Elements */
+/* Custom Cursors - Soccer Ball Hover */
 a, button, .btn, .filter-btn, .theme-toggle-btn, .mobile-toggle, .social-icon, .overlay-icon, .scroll-down, input[type="submit"], input[type="button"], select {
-    cursor: pointer;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 22px;'%3E%3Ctext y='24'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E"), pointer !important;
 }
 
 a {
@@ -168,7 +170,7 @@ button, input, textarea {
     opacity: 0.95;
 }
 
-/* Trending Mouse Following Glow - Executive Spotlight */
+/* Trending Mouse Following Glow - Football Spotlight */
 .mouse-glow {
     position: fixed;
     top: 0;
@@ -176,13 +178,13 @@ button, input, textarea {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(0, 0%, 100%, 0.06), transparent 80%);
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(43, 62%, 50%, 0.1), transparent 80%);
     pointer-events: none;
     transition: opacity var(--transition-slow);
 }
 
 body.light-theme .mouse-glow {
-    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(0, 0%, 0%, 0.04), transparent 80%);
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(353, 70%, 48%, 0.08), transparent 80%);
 }
 
 /* Trending Grain/Noise Overlay */
@@ -207,13 +209,13 @@ body.light-theme .noise-overlay {
     border-radius: 50%;
     filter: blur(120px);
     z-index: -3;
-    opacity: 0.18;
+    opacity: 0.25;
     pointer-events: none;
     transition: all var(--transition-slow);
 }
 
 body.light-theme .blob {
-    opacity: 0.12;
+    opacity: 0.15;
     filter: blur(140px);
 }
 
@@ -231,7 +233,7 @@ body.light-theme .blob {
     left: -10%;
     width: 600px;
     height: 600px;
-    background: #555555;
+    background: #da291c; /* Man Utd Red */
     animation: warm-pulse-2 30s ease-in-out infinite;
 }
 
@@ -241,7 +243,7 @@ body.light-theme .blob {
     transform: translate(-50%, -50%);
     width: 450px;
     height: 450px;
-    background: #222222;
+    background: #ffffff; /* Real Madrid White */
     animation: warm-pulse-1 20s ease-in-out infinite alternate;
 }
 
@@ -545,7 +547,7 @@ body.light-theme .sun-icon {
 }
 
 .rainbow-text {
-    background: linear-gradient(to right, #ffffff, #888888, #ffffff, #dddddd, #ffffff);
+    background: linear-gradient(to right, #cda434, #da291c, #cda434, #ffffff, #cda434);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
